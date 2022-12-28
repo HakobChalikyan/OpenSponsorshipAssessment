@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Component } from "react";
+import React, { useEffect, useState } from "react";
 
 function AthleteList() {
     const [athletes, setAthletes] = useState([{
