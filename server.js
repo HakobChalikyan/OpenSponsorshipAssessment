@@ -13,12 +13,8 @@ mongoose.connect("mongodb+srv://HakobChalikyan:MongoPass@cluster0.pnd3gps.mongod
 
 app.use("/", require("./routes/athleteRoute"));
 
+app.listen(process.env.SERVER_PORT || 3001);
+
 // app.listen(3001, function() {
 //     console.log("Express running on 3001");
 // })
-
-const port = process.env.PORT || 3001;
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
