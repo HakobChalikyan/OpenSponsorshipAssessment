@@ -6,10 +6,10 @@ const mongoose = require("mongoose");
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.MONGODB_URI;
-mongoose.connect(uri)
+// const uri = process.env.MONGODB_URI;
+// mongoose.connect(uri)
 
-//mongoose.connect("mongodb+srv://HakobChalikyan:MongoPass@cluster0.pnd3gps.mongodb.net/AthletesDB")
+mongoose.connect("mongodb+srv://HakobChalikyan:MongoPass@cluster0.pnd3gps.mongodb.net/AthletesDB")
 
 app.use("/", require("./routes/athleteRoute"));
 

@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "material-ui": "^0.20.2",
@@ -18,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
+    "start": "concurrently \"node server.js\" \"react-scripts start\"",
+    "dev": "concurrently \"node server.js\" \"react-scripts dev\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
