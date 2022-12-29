@@ -20,7 +20,12 @@ mongoose.connect(
 
 app.use("/", require("./routes/athleteRoute"));
 
-app.listen(process.env.SERVER_PORT || 3001);
+//app.listen(process.env.SERVER_PORT || 3001);
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 // app.listen(3001, function() {
 //     console.log("Express running on 3001");
